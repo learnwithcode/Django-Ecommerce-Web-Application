@@ -1,0 +1,23 @@
+body {
+    color: #ccc;
+}
+
+.form {
+    width: 50%;
+    margin: 40px auto;
+    border: 0px solid #eee;
+    padding: 50px;
+    text-align: center;
+    box-shadow:   -11px 13px 25px #eee;
+
+}
+
+.form heading {
+    width: 50%;
+    margin: 40px auto;
+    border: 2px solid #eee;
+    padding: 50px;
+    text-align: center;
+    box-shadow:   -11px 13px 25px #eee;
+
+}
