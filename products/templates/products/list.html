@@ -1,4 +1,4 @@
 {% for product in object_list %}
-{{ product.title }}<br/>
+<a href="{{ product.get_absolute_url}}">{{ product.title }}</a><br/>
 {{ product.price }}<br/>
 {% endfor %}
