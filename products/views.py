@@ -4,21 +4,17 @@ from .models import Product
 # Create your views here.
 
 class ProductFeaturedView(ListView):
-    queryset = Product.featured.all()
+    queryset = Product.objects.featured()
     template_name = 'products/list.html'
 
-    def get_context_data(self):
-        context = super(ProductFeaturedView, self).get_context_data()
-        return context
+    # def get_queryset(self, *args, **Kwargs):
+    #     request = self.request
+    #     return Product.objects.featured()
 
 class ProductFeaturedDetailView(DetailView):
-    queryset = Product.featured.all()
+    queryset = Product.objects.featured()
     template_name = "products/detail.html"
 
-    def get_context_data(self, *args, **kwargs):
-        context = super(ProductFeaturedDetailView, self).get_context_data(*args, **kwargs)
-        #print(context)
-        return context
 
 
 

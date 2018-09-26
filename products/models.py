@@ -17,27 +17,19 @@ def upload_image_path(instance, filename):
             final_filename=final_filename
             )
 class FeaturedManager(models.Manager):
-    def get_queryset(self):
-        return super(FeaturedManager, self).get_queryset()\
-                                            .filter(status='featured')
+    def featured(self):
+        return self.get_queryset().filter(featured=True)
+
 class Product(models.Model):
-    STATUS_CHOICES = ( 
-        ('normal', 'Normal'), 
-        ('featured', 'Featured'), 
-    ) 
     title = models.CharField(max_length=120)
     description = models.TextField()
     price = models.DecimalField(decimal_places=2, max_digits=20, default=39.99)
     image  = models.ImageField(upload_to=upload_image_path, null=True, blank=True)
-    status = models.CharField(max_length=10,  
-                        choices=STATUS_CHOICES, 
-                        default='normal')
-
+    featured = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-    objects  = models.Manager()
-    featured = FeaturedManager()
+    objects = FeaturedManager()
 
 
     def __str__(self):
