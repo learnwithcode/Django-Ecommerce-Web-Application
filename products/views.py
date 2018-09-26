@@ -3,6 +3,26 @@ from django.shortcuts import render, get_object_or_404
 from .models import Product
 # Create your views here.
 
+class ProductFeaturedView(ListView):
+    queryset = Product.featured.all()
+    template_name = 'products/list.html'
+
+    def get_context_data(self):
+        context = super(ProductFeaturedView, self).get_context_data()
+        return context
+
+class ProductFeaturedDetailView(DetailView):
+    queryset = Product.featured.all()
+    template_name = "products/detail.html"
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(ProductFeaturedDetailView, self).get_context_data(*args, **kwargs)
+        #print(context)
+        return context
+
+
+
+
 class ProductListView(ListView):
     queryset = Product.objects.all()
     template_name = 'products/list.html'
@@ -26,7 +46,7 @@ class ProductDetailView(DetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(ProductDetailView, self).get_context_data(*args, **kwargs)
-        #print(context)
+       # print(context)
         return context
 
 
