@@ -11,3 +11,11 @@
 [2  - Django Admin](../../tree/2ea950c2e68014aec0aafe6c966994ef0f1a6bd1/)
 
 [3  - List View](../../tree/211bb589e6da66dc0774bce9dd680f492a315ff9/)
+
+[4 -  Detail View](../../tree/21dcb5f7bcee66f836d1205f57c9076ae2849add/)
+
+[5  - Image Field](../../tree/d104b4b95ca0a36d6b0755d8f2d613797852fe6f/)
+
+[6  - Featured & Model Manager](../../tree/2957117e6f965105f629c1b8886dcf138a58e02f/) By Creating Custom Modal Manager 
+
+[7  - Featured & Model Manager](../../tree/4d33de1055a5bfe3f48aa6960034fa4b2a3c300e/) By Creating Method for Modal Manager
