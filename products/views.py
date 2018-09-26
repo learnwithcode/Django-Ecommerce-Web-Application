@@ -4,16 +4,19 @@ from .models import Product
 # Create your views here.
 
 class ProductListView(ListView):
-    template_name = 'products/list.html'
     queryset = Product.objects.all()
+    template_name = 'products/list.html'
+
     def get_context_data(self):
         context = super(ProductListView, self).get_context_data()
+        print(context)
         return context
 
 
 def product_list_view(request):
     queryset = Product.objects.all()
     context = {
-        'products': queryset
+        'object_list': queryset
     }
     return render(request, "products/list.html", context)
+
