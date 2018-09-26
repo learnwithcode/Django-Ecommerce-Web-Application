@@ -18,4 +18,8 @@
 
 [6  - Featured & Model Manager](../../tree/2957117e6f965105f629c1b8886dcf138a58e02f/) By Creating Custom Modal Manager 
 
-[7  - Featured & Model Manager](../../tree/4d33de1055a5bfe3f48aa6960034fa4b2a3c300e/) By Creating Method for Modal Manager
+[7  - Featured & Model Manager](../../tree/4d33de1055a5bfe3f48aa6960034fa4b2a3c300e/) Custom Method for Modal Manager
+
+[8  - Featured & Custom Queryset](../../tree/619f9e038bd1b6baac563bbc7fa652cfa6621c21/)
+
+[9  - Slug & Product Urls](../../tree/96954a926a8dd404747dce9cfa7c1ef5455393c2/)
