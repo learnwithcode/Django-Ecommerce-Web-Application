@@ -14,11 +14,18 @@ def upload_image_path(instance, filename):
     final_filename = '{new_filename}{ext}'.format(new_filename=new_filename, ext=ext)
     return "products/{new_filename}/{final_filename}".format(
             new_filename=new_filename, 
-            final_filename=final_filename
-            )
-class FeaturedManager(models.Manager):
+            final_filename=final_filename)
+ 
+
+class ProductQuerySet(models.query.QuerySet):
     def featured(self):
-        return self.get_queryset().filter(featured=True)
+        return self.filter(featured=True) 
+
+class FeaturedManager(models.Manager):
+    def get_queryset(self):
+        return ProductQuerySet(self.model, using=self._db)
+    def featured(self):
+        return self.get_queryset().featured() #filter(featured=True)
 
 class Product(models.Model):
     title = models.CharField(max_length=120)
