@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block head %}Contact | {{ block.super }}{% endblock%}
 {% block content %}
 <div class='form' class='text-center'>
     <h1>{{ title }}</h1>
