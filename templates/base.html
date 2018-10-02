@@ -1,12 +1,14 @@
 {% load static %}
 <!doctype html>
 <html lang="en">
+
 <head>
     {% include 'static/css.html' %}
     <title>{% block head %}eCommerce{% endblock%}</title>
 </head>
-<body>
 
+<body>
+    {% include 'navbar.html' %}
     {% block content%}
     {% endblock %}
 
@@ -14,4 +16,5 @@
 
     {% include 'static/js.html' %}
 </body>
+
 </html>

@@ -3,19 +3,19 @@
 
 {% block head %}Contact | {{ block.super }}{% endblock%}
 {% block content %}
-<div class='form' class='text-center'>
-    <h1>{{ title }}</h1>
-</div>
 <div class="container">
     <div class="row">
-        <div  class="col">
+        <div class="col">
             {{ content }}
-            <form  method='POST'>{% csrf_token %}
-                    <div class='form' class="col-sm-6 col-12">
-                        {{ form }}<br/>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+            <form method='POST'>{% csrf_token %}
+                <div class='form' class="col-sm-6 col-12">
+                    <div class='text-center'>
+                        <h1>{{ title }}</h1>
                     </div>
-                </form>            
+                    {{ form }}<br />
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
